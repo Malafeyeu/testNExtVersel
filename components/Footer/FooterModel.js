@@ -4,7 +4,7 @@ import {
   Youtube,
   Discord,
 } from '../../public/variables'
-import star from '../../public/star.png'
+import star from '../../public/Star.png'
 
 const FooterModel = {
   getFooterData: () => ({
