@@ -1,4 +1,6 @@
-import { ItemCarouselModel, ItemCarousel } from '../../../components';
+'use client'
+import ItemCarousel from "./ItemCarousel";
+import { ItemCarouselModel } from "./ItemCarouselModel";
 
 const ItemCarouselPresenter = ({
   url, 
@@ -29,4 +31,4 @@ const ItemCarouselPresenter = ({
   );
 };
 
-export { ItemCarouselPresenter }
+export default ItemCarouselPresenter

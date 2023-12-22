@@ -33,4 +33,4 @@ const GamePresenter = ({id, onClick}) => {
   )
 }
 
-export { GamePresenter }
+export default GamePresenter

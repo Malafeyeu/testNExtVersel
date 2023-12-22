@@ -1,6 +1,5 @@
 import styles from '../../styles/Footer.module.scss'
-import { IconLink } from './IconLink';
-
+import IconLink from './IconLink'
 
 const Footer = ({
   frame,
@@ -87,4 +86,4 @@ const Footer = ({
   )
 }
 
-export { Footer }
+export default Footer

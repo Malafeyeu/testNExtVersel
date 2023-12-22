@@ -1,4 +1,4 @@
-
+'use client'
 
 const IconLink = ({
   svg,
@@ -12,4 +12,4 @@ const IconLink = ({
   )
 }
 
-export { IconLink }
+export default IconLink

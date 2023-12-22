@@ -28,4 +28,4 @@ const CarouselIndicator = ({
   )
 }
 
-export { CarouselIndicator }
+export default CarouselIndicator

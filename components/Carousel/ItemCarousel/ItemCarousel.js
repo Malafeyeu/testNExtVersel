@@ -39,4 +39,4 @@ const ItemCarousel = ({
   )
 }
 
-export { ItemCarousel }
+export default ItemCarousel

@@ -1,7 +1,7 @@
-'use client'
 import { useState } from "react"
-import { BurgerActive, BurgerClose } from "../Imgs"
-import { Link } from 'next/link'
+import BurgerActive from "./burgerIcons/BurgerActive"
+import BurgerClose from "./burgerIcons/BurgerClose"
+import { Link } from 'react-scroll'
 import styles from '../../styles/Header.module.scss'
 import stylesGames from '../../styles/HomePage.module.scss'
 import stylesCareer from '../../styles/Career.module.scss'
@@ -23,16 +23,40 @@ const BurgerMenu = () => {
       <BurgerClose onChange={handler} />
       <nav className={styles.nav}>
         <ul className={styles.nav_list}>
-          <Link to={stylesGames.block_carousel} smooth={true} duration={500}>
+          <Link 
+            spy={true} 
+            to={stylesGames.block_carousel} 
+            smooth={true} 
+            duration={500}
+            offset={-80}
+          >
             <li className={styles.nav_list__item_games} onClick={handler}>Games</li>
           </Link>
-          <Link to={stylesCareer.container_career} smooth={true} duration={500}>
+          <Link 
+            spy={true} 
+            to={stylesCareer.container_career} 
+            smooth={true} 
+            duration={500}
+            offset={-80}
+          >
             <li className={styles.nav_list__item} onClick={handler}>Career</li>
           </Link>
-          <Link to={stylesAboutUs.container_aboutUs} smooth={true} duration={500}>
+          <Link 
+            spy={true} 
+            to={stylesAboutUs.container_aboutUs} 
+            smooth={true} 
+            duration={500}
+            offset={-80}
+          >
             <li className={styles.nav_list__item} onClick={handler}>About us</li>
           </Link>
-          <Link to={stylesFooter.container_footer} smooth={true} duration={500}>
+          <Link 
+            spy={true} 
+            to={stylesFooter.container_footer}
+            smooth={true} 
+            duration={500}
+            offset={-80}
+          >
             <li className={styles.nav_list__item} onClick={handler}>Contact</li>
           </Link>
         </ul>
@@ -43,4 +67,4 @@ const BurgerMenu = () => {
   )
 }
 
-export { BurgerMenu }
+export default BurgerMenu

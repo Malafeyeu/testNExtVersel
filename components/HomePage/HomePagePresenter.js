@@ -1,5 +1,6 @@
 'use client'
-import { CarouselModel, HomePage, HomePageModel } from "../../components"
+import { CarouselModel, HomePageModel } from "../../components"
+import HomePage from "./HomePage"
 import {useState} from 'react'
 
 const HomePagePresenter = () => {
@@ -30,4 +31,4 @@ const HomePagePresenter = () => {
   )
 }
 
-export { HomePagePresenter }
+export default HomePagePresenter

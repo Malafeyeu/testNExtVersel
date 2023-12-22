@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { CareerModel } from "./CareerModel";
-import { Career } from "./Career";
+import Career from "./Career";
 
 const CareerPresenter = () => {
   const [careerData, setCareerData] = useState([]);
@@ -14,4 +14,4 @@ const CareerPresenter = () => {
   return <Career careerData={careerData} data={dataCareer} />;
 };
 
-export { CareerPresenter }
+export default CareerPresenter

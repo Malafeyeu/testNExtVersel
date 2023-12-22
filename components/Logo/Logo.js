@@ -1,4 +1,4 @@
-
+'use client'
 const Logo = () => {
   return (
     <svg className='header-logo' width="172" height="33" viewBox="0 0 172 33" fill="none" xmlns="http://www.w3.org/2000/svg">

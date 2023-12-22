@@ -1,7 +1,8 @@
 'use client'
 import { useState, useEffect } from "react"
-import { BurgerMenu, Logo } from "../../../components"
-import { Link } from 'next/link'
+import { Logo } from "../../../components"
+import BurgerMenu from "@/components/BurgerMenu/BurgerMenu"
+import { Link } from 'react-scroll'
 import styles from '../../../styles/Header.module.scss'
 import stylesGames from '../../../styles/HomePage.module.scss'
 import stylesCareer from '../../../styles/Career.module.scss'
@@ -25,7 +26,13 @@ const HeaderFromHeader = () => {
           justifyContent: 'space-between',
           padding: '0 16px',
         }}>
-          <Link>
+          <Link 
+            spy={true} 
+            to={styles.container_header} 
+            smooth={true} 
+            duration={500}
+            offset={-80}
+          >
             <Logo />
           </Link>
           <BurgerMenu />
@@ -36,31 +43,61 @@ const HeaderFromHeader = () => {
     return (
       <header className={styles.header}>
         <div className={styles.flex_box}>
-          {/* <Link href={styles.container_header}> */}
+          <Link 
+            spy={true} 
+            to={styles.container_header} 
+            smooth={true} 
+            duration={500}
+            offset={-80}
+          >
             <Logo />
-          {/* </Link> */}
+          </Link>
             <nav className={styles.nav}>
               <ul className={styles.nav_list}>
-                {/* <Link href={stylesGames.block_carousel}> */}
+                <Link 
+                  spy={true} 
+                  to={stylesGames.block_carousel} 
+                  smooth={true} 
+                  duration={500}
+                  offset={-80}
+                >
                   <li className={styles.nav_list__item}>Games</li>
-                {/* </Link> */}
-                {/* <Link href={stylesCareer.container_career}> */}
+                </Link>
+                <Link 
+                  spy={true} 
+                  to={stylesCareer.container_career} 
+                  smooth={true} 
+                  duration={500}
+                  offset={-80}
+                >
                   <li className={styles.nav_list__item}>Career</li>
-                {/* </Link> */}
-                {/* <Link href={stylesAboutUs.container_aboutUs}> */}
+                </Link>
+                <Link 
+                  spy={true} 
+                  to={stylesAboutUs.container_aboutUs} 
+                  smooth={true} 
+                  duration={500}
+                  offset={-80}
+                >
                   <li className={styles.nav_list__item}>About us</li>
-                {/* </Link> */}
+                </Link>
               </ul>
             </nav>
-            {/* <Link href={stylesFooter.container_footer}> */}
+            <Link 
+              spy={true} 
+              to={stylesFooter.container_footer}
+              smooth={true} 
+              duration={500}
+              offset={-80}
+            >
               <ul className={styles.flex_box_list}>
                 <li className={styles.flex_box_list__contact}>Contact</li>
               </ul>
-            {/* </Link> */}
+            </Link>
         </div>
       </header>
     )
   }
 }
 
-export { HeaderFromHeader }
+export default HeaderFromHeader

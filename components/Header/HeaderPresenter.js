@@ -1,4 +1,5 @@
-import { Header } from "./Header";
+'use client'
+import Header from "./Header";
 import { HeaderModel } from "./HeaderModel";
 
 const HeaderPresenter = () => {
@@ -7,4 +8,4 @@ const HeaderPresenter = () => {
   return <Header {...data}/>
 }
 
-export { HeaderPresenter }
+export default HeaderPresenter

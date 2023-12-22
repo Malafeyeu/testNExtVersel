@@ -1,7 +1,7 @@
-import { 
-  CarouselIndicator,
-  ItemCarouselPresenter
-} from '../../components';
+'use client'
+
+import CarouselIndicator from './CarouselIndicator/CarouselIndicator'
+import ItemCarouselPresenter from './ItemCarousel/ItemCarouselPresenter'
 import styles from '../../styles/HomePage.module.scss'
 
 
@@ -75,4 +75,4 @@ const Carousel = ({
   )
 }
 
-export { Carousel }
+export default Carousel

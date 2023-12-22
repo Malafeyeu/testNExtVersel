@@ -1,3 +1,4 @@
+'use client'
 export * from './Header'
 export * from './Logo'
 export * from './HomePage'

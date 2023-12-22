@@ -1,3 +1,4 @@
+'use client'
 import styles from '../../styles/GamePage.module.scss'
 
 const GamePage = ({data, onClick, frame}) => {

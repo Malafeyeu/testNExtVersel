@@ -1,7 +1,6 @@
-import {
-  CarouselPresenter, 
-  GamePresenter,
-} from "../../components"
+'use client'
+import GamePresenter from "../SelectedGame/GamePresenter"
+import CarouselPresenter from "../Carousel/CarouselPresenter"
 import styles from '../../styles/HomePage.module.scss'
 
 const HomePage = ({
@@ -27,4 +26,4 @@ const HomePage = ({
   )
 }
 
-export { HomePage }
+export default HomePage

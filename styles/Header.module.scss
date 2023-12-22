@@ -78,7 +78,6 @@
       }
     }
     .burger_menu_active {
-      cursor: pointer;
       position: fixed;
       top: 78px;
       right: 0;
@@ -142,7 +141,7 @@
       z-index: 100;
     }
     .burger_menu {
-      cursor: pointer;
+      // cursor: pointer;
     }
   }
 

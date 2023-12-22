@@ -1,5 +1,4 @@
 
-
 const ItemCarouselModel = {
   calculateTransformProperties: (activeIndex, index) => {
     const offset = (activeIndex - index) / 4;

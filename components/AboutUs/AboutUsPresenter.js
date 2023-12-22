@@ -1,7 +1,7 @@
 'use client'
-import { AboutUs, AboutUsModel } from '../../components';
+import { AboutUsModel } from '../../components';
+import AboutUs from './AboutUs';
 import React, { useState, useEffect } from 'react';
-
 
 const AboutUsPresenter = () => {
   const data = AboutUsModel.getData();
@@ -27,4 +27,4 @@ const AboutUsPresenter = () => {
   return <AboutUs {...data} windowWidth={windowWidth} />
 };
 
-export { AboutUsPresenter }
+export default AboutUsPresenter

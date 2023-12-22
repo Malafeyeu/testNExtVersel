@@ -1,3 +1,4 @@
+'use client'
 import gif from '../../public/giphy.gif'
 
 const HeaderModel = {

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react"
-import { Carousel } from "../../components";
+import Carousel from "./Carousel";
 
 const CarouselPresenter = ({callback, data}) => {
   const [activeIndex, setActiveIndex] = useState(2);
@@ -29,4 +29,4 @@ const CarouselPresenter = ({callback, data}) => {
   );
 }
 
-export { CarouselPresenter }
+export default CarouselPresenter

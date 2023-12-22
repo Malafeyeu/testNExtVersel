@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
-import { FooterModel, Footer } from "../../components";
+import { FooterModel } from "../../components";
+import Footer from "./Footer";
 
 
 const FooterPresenter = () => {
@@ -55,4 +56,4 @@ const FooterPresenter = () => {
   )
 }
 
-export { FooterPresenter }
+export default FooterPresenter

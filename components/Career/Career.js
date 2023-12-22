@@ -1,4 +1,4 @@
-import { Card } from '../../components';
+import Card from './Card/Card';
 import styles from '../../styles/Career.module.scss';
 
 
@@ -18,4 +18,4 @@ const Career = ({careerData, data}) => {
   );
 }
 
-export { Career };
+export default Career;

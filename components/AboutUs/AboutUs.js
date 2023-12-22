@@ -1,10 +1,10 @@
 import styles from '../../styles/AboutUs.module.scss'
 
-const AboutUs = ({ 
-  description, 
-  title, 
+const AboutUs = ({
+  title,
+  windowWidth,
   image,
-  windowWidth
+  description
 }) => {
   return (
     <section className={styles.container_aboutUs}>
@@ -36,4 +36,4 @@ const AboutUs = ({
   )
 }
 
-export { AboutUs }
+export default AboutUs

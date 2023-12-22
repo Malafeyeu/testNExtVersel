@@ -1,3 +1,4 @@
+'use client'
 import styles from '../../../styles/Career.module.scss'
 
 const Card = ({
@@ -34,4 +35,4 @@ const Card = ({
   )
 }
 
-export { Card }
+export default Card

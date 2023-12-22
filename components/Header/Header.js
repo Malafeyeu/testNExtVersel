@@ -1,6 +1,5 @@
-import { HeaderFromHeader } from '../../components';
+import HeaderFromHeader from './HeaderFromHeader/HeaderFromHeader'
 import styles from '../../styles/Header.module.scss'
-
 
 const Header = ({title, image}) => {
   return (
@@ -14,4 +13,4 @@ const Header = ({title, image}) => {
   )
 }
 
-export { Header }
+export default Header

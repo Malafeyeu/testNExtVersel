@@ -1,3 +1,4 @@
+'use client'
 
 const HomePageModel = {
   selectedId: null,
