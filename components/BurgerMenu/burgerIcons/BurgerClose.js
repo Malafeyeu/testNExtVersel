@@ -20,7 +20,7 @@ const BurgerClose = ({onChange}) => {
         </defs>
       </svg>
     </>
-  )
-}
+  );
+};
 
-export default BurgerClose
+export default BurgerClose;

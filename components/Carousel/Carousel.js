@@ -1,36 +1,45 @@
-'use client'
-
-import CarouselIndicator from './CarouselIndicator/CarouselIndicator'
-import ItemCarouselPresenter from './ItemCarousel/ItemCarouselPresenter'
-import styles from '../../styles/HomePage.module.scss'
-
+'use client';
+import CarouselIndicator from './CarouselIndicator/CarouselIndicator';
+import ItemCarousel from './ItemCarousel/ItemCarousel';
+import styles from '../../styles/HomePage.module.scss';
 
 const Carousel = ({
-  images,
+  onClick,
+  items,
   activeIndex,
-  onPrev,
-  onNext,
-  onChange,
-  callback
+  setActiveIndex
 }) => {
+  
+
+  const handleNext = () => {
+    setActiveIndex(activeIndex === items.length - 1 ? 0 : activeIndex + 1);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex(activeIndex === 0 ? items.length - 1 : activeIndex - 1);
+  };
+
+  const handleChange = (index) => {
+    setActiveIndex(index);
+  };
   return (
     <section className={styles.block_carousel}>
       <article className={styles.carousel}>
-        {images?.map((image, i) => {
-          const { url, alt, className, id, } = image;
+        {items?.map((item, index) => {
+          const { url, alt, className, id, } = item;
           return (
-            <ItemCarouselPresenter
+            <ItemCarousel
               key={id}
               url={url.src}
               alt={alt}
               className={className}
-              index={i}
+              index={index}
               activeIndex={activeIndex}
-              onChange={onChange}
-              callback={callback}
+              onChange={handleChange}
+              onClick={onClick}
             />
           )
-        })}
+        })};
       </article>
       <nav className={styles.block_w_nav}>
         { activeIndex > 0 ? (
@@ -40,25 +49,25 @@ const Carousel = ({
             viewBox="0 0 24 24" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
-            onClick={onPrev}
+            onClick={handlePrev}
           >
             <path d="M19 12H5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M12 19L5 12L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        ) : <div className={styles.end} />}
+        ) : <div className={styles.end} />};
         <CarouselIndicator 
           activeIndex={activeIndex}
-          length={images?.length}
-          onChange={onChange}
+          length={items?.length}
+          onChange={handleChange}
         />
-        { activeIndex < images?.length - 1 ? (
+        { activeIndex < items?.length - 1 ? (
           <svg 
             width="24" 
             height="24" 
             viewBox="0 0 24 24"
             fill='none'
             xmlns="http://www.w3.org/2000/svg"
-            onClick={onNext}
+            onClick={handleNext}
           >
             <path 
               d="M5 12H19" 
@@ -69,10 +78,10 @@ const Carousel = ({
             />
             <path d="M12 5L19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        ) : <div className={styles.end} />}
+        ) : <div className={styles.end} />};
       </nav>
     </section>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

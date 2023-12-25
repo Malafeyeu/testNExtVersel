@@ -1,22 +1,23 @@
-import dynamic from "next/dynamic"
-import React from "react"
+import dynamic from 'next/dynamic'
 
-const HeaderPresenter = dynamic(() => import('@/components/Header/HeaderPresenter.js'), {ssr: false})
-const HomePagePresenter = dynamic(() => import('@/components/HomePage/HomePagePresenter.js'), {ssr: false})
-const AboutUsPresenter = dynamic(() => import('../components/AboutUs/AboutUsPresenter.js'), {ssr: false})
-const CareerPresenter = dynamic(() => import('@/components/Career/CareerPresenter.js'), {ssr: false})
-const FooterPresenter = dynamic(() => import('@/components/Footer/FooterPresenter.js'))
+const HeaderPresenter = dynamic(() => import('@/components/Header/HeaderPresenter.js'), {ssr: false});
+const HomePage = dynamic(() => import('@/components/HomePage/HomePage.js'), {ssr: false});
+const AboutUs = dynamic(() => import('@/components/AboutUs/AboutUs.js'), {ssr: false});
+const Career = dynamic(() => import('@/components/Career/Career.js'), {ssr: false});
+const Footer = dynamic(() => import('@/components/Footer/Footer.js'), {ssr: false});
+
+const LazyLoadedComponent = dynamic(() => import('@/components/LazyLoadingComponent.js'), {ssr: false});
 
 export default function Home() {
   return (
     <>
       <HeaderPresenter />
       <main>
-        <HomePagePresenter />
-        <AboutUsPresenter />
-        <CareerPresenter />
+        <HomePage />
+        <AboutUs />
+        <Career />
       </main>
-      <FooterPresenter />
+      <Footer />
     </>
-  )
-}
+  );
+};

@@ -7,7 +7,7 @@ const BurgerActive = ({onChange}) => {
         <rect x="2.5" y="17" width="19" height="2" rx="1" fill="white"/>
       </svg>
     </>
-  )
-}
+  );
+};
 
-export default BurgerActive
+export default BurgerActive;

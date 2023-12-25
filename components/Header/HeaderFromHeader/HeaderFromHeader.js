@@ -1,28 +1,29 @@
 'use client'
-import { useState, useEffect } from "react"
-import { Logo } from "../../../components"
-import BurgerMenu from "@/components/BurgerMenu/BurgerMenu"
-import { Link } from 'react-scroll'
-import styles from '../../../styles/Header.module.scss'
-import stylesGames from '../../../styles/HomePage.module.scss'
-import stylesCareer from '../../../styles/Career.module.scss'
-import stylesAboutUs from '../../../styles/AboutUs.module.scss'
-import stylesFooter from '../../../styles/Footer.module.scss'
+import { useState, useEffect } from 'react';
+import { Logo } from '../../../components';
+import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
+import { Link } from 'react-scroll';
+import styles from '../../../styles/Header.module.scss';
+import stylesGames from '../../../styles/HomePage.module.scss';
+import stylesCareer from '../../../styles/Career.module.scss';
+import stylesAboutUs from '../../../styles/AboutUs.module.scss';
+import stylesFooter from '../../../styles/Footer.module.scss';
 
 const HeaderFromHeader = () => {
+  const frame = window.innerWidth;
   const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
     setIsClient(true);
-    
   }, []);
 
   if (!isClient) {
     return null;
-  }
-  if (window.innerWidth < 840) {
+  };
+  if (frame < 840) {
     return (
       <header className={styles.header}>
-        <div className={styles.flex_box} style={window.innerWidth < 840 && {
+        <div className={styles.flex_box} style={{
           justifyContent: 'space-between',
           padding: '0 16px',
         }}>
@@ -38,7 +39,7 @@ const HeaderFromHeader = () => {
           <BurgerMenu />
         </div>
       </header>
-    )
+    );
   } else {
     return (
       <header className={styles.header}>
@@ -96,8 +97,8 @@ const HeaderFromHeader = () => {
             </Link>
         </div>
       </header>
-    )
-  }
-}
+    );
+  };
+};
 
-export default HeaderFromHeader
+export default HeaderFromHeader;

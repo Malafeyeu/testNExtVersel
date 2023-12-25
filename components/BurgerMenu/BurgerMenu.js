@@ -1,19 +1,19 @@
-import { useState } from "react"
-import BurgerActive from "./burgerIcons/BurgerActive"
-import BurgerClose from "./burgerIcons/BurgerClose"
-import { Link } from 'react-scroll'
-import styles from '../../styles/Header.module.scss'
-import stylesGames from '../../styles/HomePage.module.scss'
-import stylesCareer from '../../styles/Career.module.scss'
-import stylesAboutUs from '../../styles/AboutUs.module.scss'
-import stylesFooter from '../../styles/Footer.module.scss'
+import { useState } from 'react';
+import BurgerActive from './burgerIcons/BurgerActive';
+import BurgerClose from './burgerIcons/BurgerClose';
+import { Link } from 'react-scroll';
+import styles from '../../styles/Header.module.scss';
+import stylesGames from '../../styles/HomePage.module.scss';
+import stylesCareer from '../../styles/Career.module.scss';
+import stylesAboutUs from '../../styles/AboutUs.module.scss';
+import stylesFooter from '../../styles/Footer.module.scss';
 
 const BurgerMenu = () => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
 
   const handler = () => {
-    setActive(!active)
-  }
+    setActive(!active);
+  };
 
   return (
     <div className={active ? styles.burger_menu_active : styles.burger_menu}>
@@ -64,7 +64,7 @@ const BurgerMenu = () => {
     </>     
     }
     </div>
-  )
-}
+  );
+};
 
-export default BurgerMenu
+export default BurgerMenu;

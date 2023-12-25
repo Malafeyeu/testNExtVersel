@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 const IconLink = ({
   svg,
@@ -7,9 +7,9 @@ const IconLink = ({
 }) => {
   return (
     <a className='link' href={href}>
-      {svg || alt} 
+      {svg || alt}
     </a>
   )
-}
+};
 
-export default IconLink
+export default IconLink;

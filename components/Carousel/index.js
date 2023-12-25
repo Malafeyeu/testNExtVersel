@@ -1,5 +1,3 @@
 export * from './Carousel'
 export * from './ItemCarousel'
 export * from './CarouselIndicator'
-export * from './CarouselModel'
-export * from './CarouselPresenter'

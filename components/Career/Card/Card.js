@@ -1,5 +1,6 @@
-'use client'
-import styles from '../../../styles/Career.module.scss'
+'use client';
+import styles from '../../../styles/Career.module.scss';
+import Image from 'next/image';
 
 const Card = ({
   img,
@@ -12,8 +13,16 @@ const Card = ({
 }) => {
   return (
     <article className={styles.block_card}>
-      <img className={styles.block_card__img} src={img.src}/>
-      <h5 className={styles.block_card__title} >{title}</h5>
+      <Image 
+        className={styles.block_card__img} 
+        src={img.src}
+        priority
+        quality={100}
+        alt={'icon'}
+        width={img.width}
+        height={img.height}
+      />
+      <h5 className={styles.block_card__title}>{title}</h5>
       <ul className={styles.list}>
         <li className={styles.list__item}>
           <span>{requirements1}</span>
@@ -32,7 +41,7 @@ const Card = ({
         </li>
       </ul>
     </article>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
