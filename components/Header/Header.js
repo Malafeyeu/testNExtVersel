@@ -5,7 +5,7 @@ import earthGif from '../../public/giphy.gif'
 
 const Header = ({title}) => {
   return (
-    <div className={styles.container_header}>
+    <header className={styles.container_header}>
       <HeaderFromHeader />
       <div className={styles.block_w_gif}>
         <h1 className={styles.block_w_gif__title}>{title}</h1>
@@ -22,7 +22,7 @@ const Header = ({title}) => {
           unoptimized={true}
         />
       </div>
-    </div>
+    </header>
   )
 }
 
